@@ -1,0 +1,52 @@
+body {
+    background: mintcream;
+}
+
+.mood-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+/* The .mood-container class is applied to the container that holds the MoodList and MoodChart components. */
+.mood-container {
+    /* The display property is set to grid, which makes the .mood-container a grid container. */
+    display: grid;
+
+    /* The grid-template-columns property is used to specify the number and sizes of columns in the grid.
+    The value "1fr 1fr 1fr 0.5fr 0.5fr" creates a grid with five columns. 
+    The first three columns and the last two columns are of equal width, but the last two columns together are equal in width to one of the first three columns. */ 
+    grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
+
+    /* The gap property is used to create gutters between grid items. 
+        The value "10px" adds a 10-pixel gap between the grid items. */
+    gap: 10px;
+}
+ 
+.mood-form > * {
+    /* Add margin to all child elements from .mood-form component */
+    margin-left: 10px;
+}
+
+/* The .MoodList class is applied to the MoodList component. */
+.mood-list {
+    /* The grid-column property is used to specify the grid items' size and location within the grid. 
+        The value "2" places the MoodList component in the second column of the grid. */
+    grid-column: 2;
+}
+
+.mood-list li {
+    margin-bottom: 10px;
+}
+
+.mood-list li button {
+    margin-left: 10px;
+}
+
+/* The .MoodChart class is applied to the MoodChart component. */
+.mood-chart {
+    /* The grid-column property is used to specify the grid items' size and location within the grid. 
+        The value "3 / span 2" places the MoodChart component starting from the third column and spanning two columns. */
+    grid-column: 3 / span 2;
+}
